@@ -1,6 +1,5 @@
 "use client"
 
-import { SidebarTrigger } from "@/components/ui/sidebar"
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -20,13 +19,8 @@ import { ChevronRight } from "lucide-react"
  */
 export function AppHeader() {
   return (
-    <header className="flex h-14 shrink-0 items-center justify-center border-b border-border bg-background px-4">
-      <div className="mx-auto flex h-full w-full max-w-[976px] items-center gap-4">
-      <SidebarTrigger className="-ml-1" />
-      {/* DESIGNER: Replace with your logo asset or SVG; Wise uses green "WISE" wordmark */}
-      <div className="flex items-center gap-2">
-        <span className="text-xl font-bold text-primary">WISE</span>
-      </div>
+    <header className="flex h-[76px] shrink-0 items-center justify-center bg-background px-4">
+      <div className="mx-auto mt-16 flex h-full w-full max-w-[976px] items-center gap-4">
       <div className="flex flex-1" />
       <div className="flex items-center gap-2">
         <Button size="sm" className="bg-primary text-primary-foreground hover:bg-primary/90">

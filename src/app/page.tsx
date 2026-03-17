@@ -41,7 +41,7 @@ const RECENT_TRANSACTIONS = [
 
 export default function Home() {
   return (
-    <div className="mx-auto flex w-full max-w-[976px] flex-1 flex-col gap-8 p-6">
+    <div className="mx-auto mt-[56px] flex w-full max-w-[976px] flex-1 flex-col gap-[56px] p-6">
       {/* Total balance + actions */}
       <section className="space-y-4">
         <div className="space-y-0">
@@ -90,7 +90,7 @@ export default function Home() {
           <h2 className="text-lg font-semibold">Transactions</h2>
           <Link
             href="/"
-            className="text-sm font-medium text-primary underline-offset-4 hover:underline"
+            className="text-sm font-medium text-primary-foreground underline-offset-4 hover:underline"
           >
             See all
           </Link>
@@ -108,7 +108,7 @@ export default function Home() {
                   <p className="text-xs text-muted-foreground">{tx.subAmount}</p>
                 )}
               </div>
-              <p className={`shrink-0 text-right font-medium ${tx.isCredit ? "text-primary" : ""}`}>
+              <p className={`shrink-0 text-right font-medium ${tx.isCredit ? "text-primary-foreground" : ""}`}>
                 {tx.amount}
               </p>
             </li>
