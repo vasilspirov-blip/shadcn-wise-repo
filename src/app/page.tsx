@@ -62,9 +62,9 @@ export default function Home() {
       </section>
 
       {/* Currency account cards */}
-      <section className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      <section className="flex gap-[12px] overflow-x-auto pb-1">
         {CURRENCY_ACCOUNTS.map((account) => (
-          <Card key={account.code} className="bg-muted/50">
+          <Card key={account.code} className="h-[206px] w-[256px] shrink-0 bg-muted/50">
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
               <span className="text-lg" aria-hidden>{account.flag}</span>
               <CardTitle className="text-base font-medium">{account.label}</CardTitle>
