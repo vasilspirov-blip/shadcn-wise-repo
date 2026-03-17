@@ -90,7 +90,7 @@
   /* Light: backgrounds from grey-100, text/surfaces from mid/dark greys */
   --background: var(--grey-100);
   --foreground: var(--grey-600);
-  --card: var(--grey-100);
+  --card: var(--grey-200);
   --card-foreground: var(--grey-600);
   --popover: var(--grey-100);
   --popover-foreground: var(--grey-600);
