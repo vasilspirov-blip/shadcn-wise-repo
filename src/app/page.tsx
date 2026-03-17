@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 import {
   Card,
   CardContent,
@@ -26,10 +27,10 @@ import { ArrowUpCircle, PlusCircle, ChevronDown } from "lucide-react"
  */
 
 const CURRENCY_ACCOUNTS = [
-  { code: "EUR", label: "EUR", accountId: "51568", balance: "1.00", flag: "🇪🇺" },
-  { code: "AUD", label: "AUD", accountId: "30779", balance: "0.00", flag: "🇦🇺" },
-  { code: "CAD", label: "CAD", accountId: "15376", balance: "0.00", flag: "🇨🇦" },
-  { code: "GBP", label: "GBP", accountId: "13159", balance: "0.00", flag: "🇬🇧" },
+  { code: "EUR", label: "EUR", accountId: "51568", balance: "1.00", flagSrc: "/assets/eur.png" },
+  { code: "AUD", label: "AUD", accountId: "30779", balance: "0.00", flagSrc: "/assets/aud.png" },
+  { code: "CAD", label: "CAD", accountId: "15376", balance: "0.00", flagSrc: "/assets/cad.png" },
+  { code: "GBP", label: "GBP", accountId: "13159", balance: "0.00", flagSrc: "/assets/gbp.png" },
 ]
 
 const RECENT_TRANSACTIONS = [
@@ -66,7 +67,13 @@ export default function Home() {
         {CURRENCY_ACCOUNTS.map((account) => (
           <Card key={account.code} className="h-[206px] w-[256px] shrink-0 gap-[72px] bg-muted/50">
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-              <span className="text-lg" aria-hidden>{account.flag}</span>
+              <Image
+                src={account.flagSrc}
+                alt=""
+                width={48}
+                height={48}
+                className="size-12 shrink-0 rounded-full object-cover"
+              />
               <CardTitle className="text-base font-medium">{account.label}</CardTitle>
             </CardHeader>
             <CardContent className="space-y-1">
