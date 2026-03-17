@@ -40,30 +40,24 @@ const RECENT_TRANSACTIONS = [
 
 export default function Home() {
   return (
-    <div className="flex flex-1 flex-col gap-8 p-6">
+    <div className="mx-auto flex w-full max-w-[976px] flex-1 flex-col gap-8 p-6">
       {/* Total balance + actions */}
       <section className="space-y-4">
-        <h2 className="text-sm font-medium text-muted-foreground">Total balance</h2>
-        <p className="text-3xl font-bold tracking-tight">2.00 EUR</p>
-        <div className="flex flex-wrap gap-2">
+        <div className="space-y-0">
+        <p className="text-sm font-medium text-muted-foreground">Total balance</p>
+        <p className="text-3xl font-bold tracking-tight">98.00 EUR</p>
+        </div>
+        <div className="flex flex-wrap gap- gap-2">
           <Button size="sm" className="bg-primary text-primary-foreground hover:bg-primary/90">
             Send money
           </Button>
           <Button size="sm" variant="secondary">
             Add money
           </Button>
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <Button size="sm" variant="secondary" className="gap-1">
-                Request
-                <ChevronDown className="size-4" />
+         
+              <Button size="sm" variant="secondary">
+                Request money
               </Button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent align="start">
-              <DropdownMenuItem>Request from bank account</DropdownMenuItem>
-              <DropdownMenuItem>Request from card</DropdownMenuItem>
-            </DropdownMenuContent>
-          </DropdownMenu>
         </div>
       </section>
 
